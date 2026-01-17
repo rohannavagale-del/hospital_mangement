@@ -1,0 +1,6 @@
+node_modules/
+*.zip
+*.pdf
+*.csv
+*.ipynb
+.ipynb_checkpoints/

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Healthcare Support Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Healthcare Support Assistant</h1>
+    <p class="subtitle">
+        Submit your health concern and receive an AI-assisted response instantly.
+    </p>
+
+    <form id="supportForm">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email Address</label>
+        <input type="email" id="email" required>
+
+        <label>Describe Your Issue</label>
+        <textarea id="issue" rows="4" required></textarea>
+
+        <label>Urgency Level</label>
+        <select id="urgency">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <div id="response" class="response-box"></div>
+    
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbotToggle" class="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    
+    <!-- Chatbot Container -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Healthcare Assistant</h3>
+            <button id="closeChatbot" class="close-chatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your healthcare assistant. How can I help you today?</p>
+                    <div class="quick-questions">
+                        <button class="quick-question" data-question="What are your operating hours?">Operating Hours</button>
+                        <button class="quick-question" data-question="How do I book an appointment?">Book Appointment</button>
+                        <button class="quick-question" data-question="What services do you offer?">Our Services</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message..." />
+            <button id="sendMessage">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="feature-highlights">
+        <h3>Our Features</h3>
+        <div class="features-grid">
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Instant AI-assisted response</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Smart issue categorization</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Urgency prioritization</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
